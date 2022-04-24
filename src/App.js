@@ -1,12 +1,12 @@
 import './App.css';
+import { Extended } from './components/Extended';
 import { Dashboard } from './components/Dashboard';
-import { Horizontal } from './components/Horizontal';
 
 function App() {
   return (
     <div className="App">
       <Dashboard />
-      <Horizontal />
+      <Extended />
     </div>
   );
 }

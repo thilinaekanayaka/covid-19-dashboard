@@ -1,8 +1,6 @@
 import { Bar } from 'react-chartjs-2';
 import { Chart, registerables } from 'chart.js';
-import { Box, Button, Card, CardContent, CardHeader, Divider, useTheme } from '@mui/material';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import { Box, Card, CardContent, CardHeader, Divider, useTheme } from '@mui/material';
 
 Chart.register(...registerables);
 
@@ -87,14 +85,6 @@ export const Dashboard = (props) => {
   return (
     <Card {...props}>
       <CardHeader
-        action={(
-          <Button
-            endIcon={<ArrowDropDownIcon fontSize="small" />}
-            size="small"
-          >
-            Last 7 days
-          </Button>
-        )}
         title="Latest Sales"
       />
       <Divider />
@@ -111,22 +101,6 @@ export const Dashboard = (props) => {
           />
         </Box>
       </CardContent>
-      <Divider />
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'flex-end',
-          p: 2
-        }}
-      >
-        <Button
-          color="primary"
-          endIcon={<ArrowRightIcon fontSize="small" />}
-          size="small"
-        >
-          Overview
-        </Button>
-      </Box>
     </Card>
   );
 };
